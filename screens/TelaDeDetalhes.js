@@ -36,18 +36,14 @@ const TelaDeDetalhes = ({ route }) => {
       {temImagemValida ? (
         <Image source={{ uri: artigo.image }} style={styles.imagem} />
       ) : (
-        // Mostra um placeholder se não houver imagem, mantendo o layout
         <View style={[styles.imagem, styles.imagemPlaceholder]}>
           <Text style={styles.placeholderText}>Sem Imagem</Text>
         </View>
       )}
 
-      {/* Container para o conteúdo de texto, com espaçamento */}
       <View style={styles.contentContainer}>
-        {/* Título da notícia */}
         <Text style={styles.titulo}>{artigo.title}</Text>
 
-        {/* Informações da fonte e data */}
         <View style={styles.metaInfoContainer}>
           <Text style={styles.fonte}>{artigo.source?.name || 'Fonte desconhecida'}</Text>
           <Text style={styles.data}>{formatarData(artigo.publishedAt)}</Text>
@@ -74,7 +70,7 @@ const styles = StyleSheet.create({
   },
   imagem: {
     width: '100%',
-    height: 250, // Altura da imagem de destaque
+    height: 250,
     backgroundColor: '#e0e0e0',
   },
   imagemPlaceholder: {
