@@ -47,8 +47,8 @@ Siga os passos abaixo para executar o projeto localmente.
 
 **1. Clone o repositório:**
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/GhMalak/Teste_Desafio_React)
+cd meu-app-de-noticias
 ```
 
 **2. Instale as dependências:**
@@ -58,7 +58,7 @@ npm install
 
 **3. Crie sua chave da API:**
    - Acesse [gnews.io](https://gnews.io/ ), crie uma conta gratuita e obtenha sua API Key.
-   - No arquivo `services/api.js` (ou `api.js`), substitua o valor da constante `API_KEY` pela sua chave:
+   - No arquivo `services/newsApi.js` (ou `api.js`), substitua o valor da constante `API_KEY` pela sua chave:
      ```javascript
      const API_KEY = 'SUA_CHAVE_DA_API_AQUI';
      ```
