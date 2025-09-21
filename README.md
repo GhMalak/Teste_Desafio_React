@@ -48,7 +48,7 @@ Siga os passos abaixo para executar o projeto localmente.
 **1. Clone o repositório:**
 ```bash
 git clone https://github.com/GhMalak/Teste_Desafio_React
-cd nome-do-repositorio
+cd meu-app-de-noticias
 ```
 
 **2. Instale as dependências:**
