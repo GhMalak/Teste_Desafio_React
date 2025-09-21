@@ -58,7 +58,7 @@ npm install
 
 **3. Crie sua chave da API:**
    - Acesse [gnews.io](https://gnews.io/ ), crie uma conta gratuita e obtenha sua API Key.
-   - No arquivo `services/api.js` (ou `api.js`), substitua o valor da constante `API_KEY` pela sua chave:
+   - No arquivo `services/newsApi.js`, substitua o valor da constante `API_KEY` pela sua chave:
      ```javascript
      const API_KEY = 'SUA_CHAVE_DA_API_AQUI';
      ```
