@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { View, FlatList, StyleSheet, Text } from 'react-native';
-import { useNavigation, useIsFocused } from '@react-navigation/native'; // 1. Importar useIsFocused
+import { useNavigation, useIsFocused } from '@react-navigation/native';
 
 import CardNoticia from '../components/CardNoticia';
 import { useFavorites } from '../hooks/useFavorites.js';
@@ -38,7 +38,6 @@ const TelaFavoritos = () => {
           data={favorites}
           renderItem={renderItem}
           keyExtractor={(item) => item.url}
-          // 3. A FlatList aqui também observa o status de foco
           extraData={{ favorites, isFocused }}
           contentContainerStyle={styles.listContent}
         />

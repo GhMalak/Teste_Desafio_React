@@ -1,9 +1,7 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
-// 1. Importar o pacote de ícones que já vem com o Expo
 import { Ionicons } from '@expo/vector-icons';
 
-// 2. Adicionar 'isFavorite' e 'onToggleFavorite' às propriedades do componente
 const CardNoticia = ({ artigo, onPress, isFavorite, onToggleFavorite }) => {
   
   const formatarData = (dataString) => {
@@ -19,7 +17,6 @@ const CardNoticia = ({ artigo, onPress, isFavorite, onToggleFavorite }) => {
   const temImagemValida = artigo && artigo.image && artigo.image.startsWith('http' );
 
   return (
-    // 3. Envolvemos tudo em uma <View> para permitir o posicionamento absoluto do botão
     <View style={styles.wrapper}>
       <TouchableOpacity style={styles.cardContainer} onPress={onPress} activeOpacity={0.8}>
         {temImagemValida ? (
@@ -41,13 +38,10 @@ const CardNoticia = ({ artigo, onPress, isFavorite, onToggleFavorite }) => {
         </View>
       </TouchableOpacity>
 
-      {/* 4. Botão de Favorito, posicionado sobre o card */}
       <TouchableOpacity style={styles.favoriteButton} onPress={onToggleFavorite}>
         <Ionicons 
-          // O nome do ícone muda com base na propriedade 'isFavorite'
           name={isFavorite ? "heart" : "heart-outline"} 
           size={28} 
-          // A cor também muda
           color={isFavorite ? "#E91E63" : "#FFFFFF"} 
         />
       </TouchableOpacity>
@@ -55,10 +49,9 @@ const CardNoticia = ({ artigo, onPress, isFavorite, onToggleFavorite }) => {
   );
 };
 
-// 5. Adicionar os novos estilos ao StyleSheet
 const styles = StyleSheet.create({
   wrapper: {
-    marginBottom: 16, // A margem que antes estava no card agora fica no wrapper
+    marginBottom: 16,
   },
   cardContainer: {
     backgroundColor: '#fff',
@@ -71,13 +64,13 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
   },
   favoriteButton: {
-    position: 'absolute', // Permite que o botão flutue sobre os outros elementos
+    position: 'absolute',
     top: 12,
     right: 12,
-    zIndex: 1, // Garante que o botão fique na frente da imagem
+    zIndex: 1,
     padding: 8,
     backgroundColor: 'rgba(0, 0, 0, 0.4)',
-    borderRadius: 30, // Deixa o fundo do botão redondo
+    borderRadius: 30,
   },
   imagem: {
     width: '100%',

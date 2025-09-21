@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'; // Usaremos um ícone, fica mais bonito!
-
+import { Ionicons } from '@expo/vector-icons';
 const BarraDeBusca = ({ valor, aoMudarTexto, aoBuscar }) => {
   return (
     <View style={styles.container}>
@@ -10,7 +9,7 @@ const BarraDeBusca = ({ valor, aoMudarTexto, aoBuscar }) => {
         placeholder="Buscar por palavra-chave..."
         value={valor}
         onChangeText={aoMudarTexto}
-        onSubmitEditing={aoBuscar} // Permite buscar ao pressionar "enter" no teclado
+        onSubmitEditing={aoBuscar}
       />
       <TouchableOpacity style={styles.iconContainer} onPress={aoBuscar}>
         <Ionicons name="search" size={24} color="white" />

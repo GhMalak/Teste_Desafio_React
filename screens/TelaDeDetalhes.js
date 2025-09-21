@@ -3,17 +3,14 @@ import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity, Linking } 
 import { Ionicons } from '@expo/vector-icons';
 
 const TelaDeDetalhes = ({ route }) => {
-  // 1. Pegar o objeto 'artigo' que foi passado como parâmetro na navegação
   const { artigo } = route.params;
 
-  // Função para abrir o link da notícia original no navegador
   const handleOpenLink = () => {
     if (artigo.url) {
       Linking.openURL(artigo.url);
     }
   };
 
-  // Função para formatar a data, para consistência visual
   const formatarData = (dataString) => {
     if (!dataString) return ''; 
     const data = new Date(dataString);
@@ -26,13 +23,10 @@ const TelaDeDetalhes = ({ route }) => {
     });
   };
 
-  // Verifica se a URL da imagem é válida
   const temImagemValida = artigo && artigo.image && artigo.image.startsWith('http' );
 
   return (
-    // 2. Usar ScrollView para garantir que o conteúdo role se for muito grande
     <ScrollView style={styles.container}>
-      {/* 3. Adicionar o componente Image para exibir a imagem de destaque */}
       {temImagemValida ? (
         <Image source={{ uri: artigo.image }} style={styles.imagem} />
       ) : (
@@ -49,10 +43,8 @@ const TelaDeDetalhes = ({ route }) => {
           <Text style={styles.data}>{formatarData(artigo.publishedAt)}</Text>
         </View>
 
-        {/* Resumo/Conteúdo da notícia */}
         <Text style={styles.conteudo}>{artigo.description || artigo.content || 'Conteúdo não disponível.'}</Text>
 
-        {/* Botão para ler a notícia completa */}
         <TouchableOpacity style={styles.linkButton} onPress={handleOpenLink}>
           <Text style={styles.linkButtonText}>Ler notícia completa</Text>
           <Ionicons name="open-outline" size={20} color="#fff" style={{ marginLeft: 8 }} />
@@ -62,7 +54,6 @@ const TelaDeDetalhes = ({ route }) => {
   );
 };
 
-// 4. Adicionar e ajustar os estilos para acomodar a imagem e melhorar o visual
 const styles = StyleSheet.create({
   container: {
     flex: 1,

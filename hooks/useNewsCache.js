@@ -7,18 +7,16 @@ export const useNewsCache = () => {
   const [isConnected, setIsConnected] = useState(true);
   const [cachedNews, setCachedNews] = useState([]);
 
-  // Efeito para "escutar" o estado da conexão de rede
   useEffect(() => {
     const unsubscribe = NetInfo.addEventListener(state => {
       setIsConnected(state.isConnected);
     });
 
     return () => {
-      unsubscribe(); // Limpa o listener quando o componente é desmontado
+      unsubscribe();
     };
   }, []);
 
-  // Efeito para carregar as notícias do cache na inicialização
   useEffect(() => {
     const loadCache = async () => {
       try {
@@ -33,10 +31,8 @@ export const useNewsCache = () => {
     loadCache();
   }, []);
 
-  // Função para salvar novas notícias no cache
   const saveNewsToCache = async (news) => {
     try {
-      // Vamos salvar apenas as 20 primeiras notícias para não sobrecarregar o storage
       const newsToCache = news.slice(0, 20);
       await AsyncStorage.setItem(NEWS_CACHE_KEY, JSON.stringify(newsToCache));
       setCachedNews(newsToCache);

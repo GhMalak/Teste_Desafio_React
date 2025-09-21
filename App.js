@@ -1,18 +1,14 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'; // 1. Importar
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
-
-// Importa todas as nossas telas
 import TelaInicial from './screens/TelaInicial';
 import TelaDeDetalhes from './screens/TelaDeDetalhes';
-import TelaFavoritos from './screens/TelaFavoritos'; // 2. Importar a nova tela
+import TelaFavoritos from './screens/TelaFavoritos';
 
-const Tab = createBottomTabNavigator(); // Cria o navegador de abas
-const Stack = createStackNavigator(); // O navegador de pilha continua existindo
-
-// 3. Criamos um componente para a navegação principal (abas)
+const Tab = createBottomTabNavigator(); 
+const Stack = createStackNavigator();  
 function HomeTabs() {
   return (
     <Tab.Navigator
@@ -28,7 +24,7 @@ function HomeTabs() {
         },
         tabBarActiveTintColor: '#007BFF',
         tabBarInactiveTintColor: 'gray',
-        headerShown: false, // Vamos deixar o cabeçalho ser gerenciado pelo Stack Navigator
+        headerShown: false,
       })}
     >
       <Tab.Screen name="Início" component={TelaInicial} />
@@ -37,7 +33,6 @@ function HomeTabs() {
   );
 }
 
-// 4. O App agora usa um Stack Navigator que contém as abas e a tela de detalhes
 export default function App() {
   return (
     <NavigationContainer>
@@ -48,13 +43,11 @@ export default function App() {
           headerTitleStyle: { fontWeight: 'bold' },
         }}
       >
-        {/* A primeira tela do Stack agora é o nosso conjunto de abas */}
         <Stack.Screen 
           name="NewsApp" 
           component={HomeTabs} 
-          options={{ title: 'Últimas Notícias' }} // Título padrão
+          options={{ title: 'Últimas Notícias' }}
         />
-        {/* A tela de detalhes continua aqui, fora das abas */}
         <Stack.Screen
           name="TelaDeDetalhes"
           component={TelaDeDetalhes}
