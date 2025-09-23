@@ -4,8 +4,8 @@ Este é um aplicativo de notícias mobile desenvolvido em React Native como part
 
 ## 📱 Demonstração
 https://www.youtube.com/shorts/ZKRhas2Eqag
-<img src="assets/teste1.jpg" width="48">
-<img src="assets/teste2.jpg" width="48">
+<img src="assets/teste1.jpg" width="100">
+<img src="assets/teste2.jpg" width="100">
 
 ## ✨ Funcionalidades Implementadas
 
