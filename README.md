@@ -3,16 +3,9 @@
 Este é um aplicativo de notícias mobile desenvolvido em React Native como parte de um desafio de front-end. O app consome a API da [GNews](https://gnews.io/ ) para exibir as últimas notícias, permitindo ao usuário buscar, filtrar por categorias e salvar suas notícias favoritas para ler depois.
 
 ## 📱 Demonstração
-
-<<<<<<< HEAD
 https://www.youtube.com/shorts/ZKRhas2Eqag
-![Menu do projeto](assets/teste1.jpg)
-![Aba favoritos](assets/teste2.jpg)
-=======
-https://youtube.com/shorts/ZKRhas2Eqag?feature=share
-
->>>>>>> b6c4fbbaf2710678713b741f8de27139592de379
----
+<img src="assets/teste1.jpg" width="48">
+<img src="assets/teste2.jpg" width="48">
 
 ## ✨ Funcionalidades Implementadas
 
