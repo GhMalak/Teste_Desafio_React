@@ -4,10 +4,7 @@ Este é um aplicativo de notícias mobile desenvolvido em React Native como part
 
 ## 📱 Demonstração
 
-*(Aqui você deve inserir o GIF ou um link para o vídeo que você vai gravar no Passo 3. Um GIF animado é a melhor opção para um README.)*
-
-**Exemplo de como adicionar um GIF:**
-`![Demonstração do App](link_para_seu_gif.gif)`
+https://youtube.com/shorts/ZKRhas2Eqag?feature=share
 
 ---
 
